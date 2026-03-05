@@ -10,6 +10,7 @@ include_directories(include)
 add_executable(SysTelemetryLogger 
     src/main.cpp 
     src/TelemetryMonitor.cpp
+    src/DatabaseManager.cpp 
     include/sqlite3.c
 )
 
