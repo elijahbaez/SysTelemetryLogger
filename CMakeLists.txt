@@ -16,3 +16,6 @@ add_executable(SysTelemetryLogger
 
 # Link Windows libraries required for system metrics
 target_link_libraries(SysTelemetryLogger pdh wbemuuid)
+
+# Apply aggressive compiler optimizations for Release builds to maintain <2% CPU overhead
+target_compile_options(SysTelemetryLogger PRIVATE "$<$<CONFIG:Release>:/O2>")
